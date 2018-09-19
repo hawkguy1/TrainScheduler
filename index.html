@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TRAIN SCHEDULER</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/images/train.png" type="image/png" sizes="16x16">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- MY STYLE -->
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <!-- AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- MOMENT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+</head>
+
+<body>
+    <!-- TITLE HEADER CONTAINER-->
+    <div class="container">
+        <div class="row">
+            <div id="pageHeader" class="col-lg-12">
+                <h1>TRAIN SCHEDULER</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="schedule" class="col-lg-12">
+                <h3>CURRENT TRAIN SCHEDULE:</h3>
+                <table id="trainScheduleColumns" class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th scope="col">TRAIN NAME:</th>
+                            <th scope="col">DESTINATION:</th>
+                            <th scope="col">FREQUENCY (MIN):</th>
+                            <th scope="col">NEXT ARRIVAL:</th>
+                            <th scope="col">MINUTES AWAY:</th>
+                            <th scope="col">REMOVE:</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trainScheduleData"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="addTrain" class="col-lg-6">
+                <h3>ADD TRAIN:</h3>
+                <form id="form">
+                    <div class="form-group">
+                        <label for="formTextArea" class="label">TRAIN NAME:</label>
+                        <input type="text" class="form-control" id="train-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="formTextArea" class="label">DESTINATION:</label>
+                        <input type="text" class="form-control" id="train-destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="formTextArea" class="label">FIRST TRAIN TIME: (HH:MM - MILITARY TIME)</label>
+                        <input type="text" class="form-control" id="first-train-time">
+                    </div>
+                    <div class="form-group">
+                        <label for="formTextArea" class="label">FREQUENCY: (MINUTES)</label>
+                        <input type="text" class="form-control" id="train-frequency">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="submit-button">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
