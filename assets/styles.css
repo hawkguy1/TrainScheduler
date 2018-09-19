@@ -1,6 +1,8 @@
+/* -- BACKGROUND -- */
 body {
     background-image: url("images/dark-background.png");
 }
+/* -- PAGE HEAD -- */
 #pageHeader {
     background-image: url("images/tweed.png");
     padding: 10px;
@@ -17,6 +19,7 @@ body {
     font-weight: bold;
     letter-spacing: 5px;
 }
+/* -- TRAIN SCHEDULE -- */
 #schedule {
     background-image: url("images/tweed.png");
     padding: 20px;
@@ -35,7 +38,16 @@ body {
 }
 .thead {
     color: white;
+    text-align: center;
+    font-size: 20px;
 }
+#trainScheduleData {
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -- TRAIN ADDER -- */
 #addTrain {
     color: white;
     background-image: url("images/tweed.png");
@@ -55,8 +67,4 @@ body {
 }
 #form {
     padding:20px;
-}
-#trainScheduleData {
-    color: white;
-    text-align: center;
 }
